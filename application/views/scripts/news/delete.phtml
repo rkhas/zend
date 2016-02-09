@@ -1,0 +1,10 @@
+<p>Выточно хотите удалить новость
+    '<?php echo $this->escape($this->news['header']); ?>' ?
+</p>
+<form action="<?php echo $this->url(array('action'=>'delete')); ?>" method="post">
+    <div>
+        <input type="hidden" name="id_news" value="<?php echo $this->news['id_news']; ?>" />
+        <input type="submit" name="del" value="Да" />
+        <input type="submit" name="del" value="Нет" />
+    </div>
+</form>

@@ -1,0 +1,31 @@
+<?php echo $this->headLink()->prependStylesheet($this->baseUrl() . '/js/ext/resources/css/ext-all.css'); ?>
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl() . '/js/ext/imc/grid-examples.css'); ?>
+
+<?php // echo $this->headScript()->prependFile($this->baseUrl() . '/js/ext/ext-all-debug.js');?>
+<?php echo $this->headScript()->prependFile($this->baseUrl() . '/js/ext/ext-all.js');?>
+<?php echo $this->headScript()->prependFile($this->baseUrl() . '/js/ext/adapter/ext/ext-base.js');?>
+
+<?php echo $this->headScript()->appendFile($this->baseUrl() . '/js/ext/imc/SessionProvider.js');?>
+<?php echo $this->headScript()->appendFile($this->baseUrl() . '/js/ext/imc/TabCloseMenu.js');?>
+
+<?php echo $this->headScript()->appendFile($this->baseUrl() . '/js/ext/imc/FeedViewer.js');?>
+<?php echo $this->headScript()->appendFile($this->baseUrl() . '/js/ext/imc/FeedWindow.js');?>
+<?php echo $this->headScript()->appendFile($this->baseUrl() . '/js/ext/imc/FeedEditWindow.js');?>
+<?php echo $this->headScript()->appendFile($this->baseUrl() . '/js/ext/imc/FeedGrid.js');?>
+<?php echo $this->headScript()->appendFile($this->baseUrl() . '/js/ext/imc/MainPanel.js');?>
+<?php echo $this->headScript()->appendFile($this->baseUrl() . '/js/ext/imc/FeedPanel.js');?>
+
+<div id="header">
+    <div style="float:right;margin:5px;" class="x-small-editor"></div>
+</div>
+
+<!-- Template used for Feed Items -->
+<div id="preview-tpl" style="display:none;">
+    <div class="post-data">
+        <h3 class="post-title">{header} <span style="font-weight: normal!important;">({posted:this.getPosted})</span></h3>
+        <div class="post-date">{add_date:this.getDate}</div>
+        <!--<h4 class="post-author">{anons}</h4>-->
+    </div>
+    <br>
+    <div class="post-body">{context:this.getBody}</div>
+</div>
